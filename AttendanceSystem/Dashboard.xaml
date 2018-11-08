@@ -1,0 +1,47 @@
+﻿<Window x:Class="AttendanceSystem.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Dashboard" ResizeMode="CanResizeWithGrip" ShowInTaskbar="False" WindowStyle="None" WindowState="Maximized">
+      <Grid>
+        <Grid Height="50" VerticalAlignment="Top" Background="#FF10CF10">
+            <TextBlock Text="Attendance System" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White" FontFamily="Raleway ExtraBold" FontStyle="Italic"></TextBlock>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock Text="Justine Espinosa" VerticalAlignment="Center" FontSize="12" Foreground="White"></TextBlock>
+                <materialDesign:PopupBox HorizontalAlignment="Right" Margin="0" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Background="White" Foreground="White">
+                    <StackPanel Width="100">
+                        <Button Content="Account"/>
+                        <Separator/>
+                        <Button Click="btnLogout" Content="Logout"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+        </Grid>
+        <Grid Width="210" HorizontalAlignment="Left" Background="#FF20BF11">
+            <StackPanel>
+                <Grid Height="150" Background="White">
+                    <Button x:Name="btnClose" Height="60" Width="30" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <materialDesign:PackIcon Foreground="Black" Width="25" Height="25" Kind="ArrowLeft"/>
+                    </Button>
+                </Grid>
+                <ListView Foreground="White">
+                    <ListViewItem Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25"/>
+                            <TextBlock Text="Dashboard" VerticalAlignment="Center" Margin="15,0,0,0" FontFamily="Raleway ExtraBold"></TextBlock>  
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Register" Width="25" Height="25"/>
+                            <TextBlock x:Name="txtDashboard" Text="Employee" VerticalAlignment="Center" Margin="15,0,0,0" FontFamily="Raleway ExtraBold"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                 
+
+                </ListView>
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
